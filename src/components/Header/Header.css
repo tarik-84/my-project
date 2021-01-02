@@ -1,0 +1,16 @@
+@media (max-width: 845px){
+    .header-search-bar{
+      display: none;
+    }
+  }
+
+  
+
+  .NavLink {
+    margin: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  
+  

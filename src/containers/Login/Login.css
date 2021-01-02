@@ -1,0 +1,15 @@
+.container {
+   background-image: url(../../asset/login.jpg); 
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 60vh;
+}
+
+.link{
+   color: whitesmoke;
+}
+
+.link:hover{
+   color: black;
+   text-decoration: none;
+}
