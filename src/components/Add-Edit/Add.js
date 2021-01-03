@@ -15,7 +15,7 @@ const initialList = {
 const AddGuide = () => {
 
   const [add, setAdd] = useState(initialList);
-  const [image, setImage] = useState('')
+  // const [image, setImage] = useState('')
 
   const history = useHistory()
 
@@ -59,7 +59,7 @@ const AddGuide = () => {
     <div className='add-container'>
       <h2>Add New Guides</h2>
       <div className='card'>
-        <div className="image">
+        {/* <div className="image">
           <label>
             <input style={{ display: 'none' }}
               type="file"
@@ -68,7 +68,7 @@ const AddGuide = () => {
               onChange={uploadImage}
             /> Upload Image</label>
           <img src={image} style={{ width: '200px' }} alt='' />
-        </div>
+        </div> */}
         <form onSubmit={addHowTo}>
           <div className='add' />
           <TextField className='text'
