@@ -19,23 +19,23 @@ const AddGuide = () => {
 
   const history = useHistory()
 
-  const uploadImage = async e => {
-    const files = e.target.files
-    const data = new FormData()
-    data.append('file', files[0])
-    data.append('upload_preset', 'tarik84')
+  // const uploadImage = async e => {
+  //   const files = e.target.files
+  //   const data = new FormData()
+  //   data.append('file', files[0])
+  //   data.append('upload_preset', 'tarik84')
 
-    const res = await fetch(
-      '	https://api.cloudinary.com/v1_1/dxzeyyerm/image/upload',
-      {
-        method: 'POST',
-        body: data
-      }
-    )
-    const file = await res.json()
+  //   const res = await fetch(
+  //     '	https://api.cloudinary.com/v1_1/dxzeyyerm/image/upload',
+  //     {
+  //       method: 'POST',
+  //       body: data
+  //     }
+  //   )
+  //   const file = await res.json()
 
-    setImage(file.secure_url)
-  }
+  //   setImage(file.secure_url)
+  // }
 
   const changeHandler = e => {
     setAdd({
