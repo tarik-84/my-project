@@ -40,19 +40,19 @@ const ViewGuide = props => {
         } 
 
     return(
-      <div>
-        <div className='view'>
+      <div className='view'>
+        <div>
         <ArticleCard
-                       fetchData={props.fetchData}
-                       name={view.name}
-                       description={view.description}
-                       price={view.price}
-                       location={view.location_id}
-                       /> 
+          fetchData={props.fetchData}
+          name={view.name}
+          description={view.description}
+          price={view.price}
+          location={view.location_id}
+          /> 
         </div>
         <div>   
-          <Button variant="outlined" color="primary" size="small" onClick={() => history.push(`/edit-guide/${params.id}`)}>Edit</Button>
-          <Button variant="outlined" color="primary" size="small" onClick={deleteGuide}>Delete</Button>
+          <Button variant="contained" color="primary" size="small" onClick={() => history.push(`/edit-guide/${params.id}`)}>Edit</Button>
+          <Button variant="contained" color="primary" size="small" onClick={deleteGuide}>Delete</Button>
         </div>
       </div>  
     )
