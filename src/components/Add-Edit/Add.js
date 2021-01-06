@@ -57,7 +57,7 @@ const AddGuide = () => {
 
   return (
     <div className='add-container'>
-      <h2>Add New Guides</h2>
+      <h2>Add New Item</h2>
       <div className='card'>
         {/* <div className="image">
           <label>

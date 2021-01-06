@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ArticleCard from '../FP_ArticleCard/FP_ArticleCard'
-import Axios from "axios";
+import { axiosWithAuth } from '../Axios/axiosWithAuth';
 
 
 
@@ -11,8 +11,8 @@ export default function SearchForm() {
     const [query, setQuery] = useState("");
       
   useEffect(()=>{
-    Axios
-    .get(`https://testing-app-db1.herokuapp.com/accounts`) 
+    axiosWithAuth()
+    .get('/api/items') 
     .then (res =>{
         console.log('rrr', res)
       const category = res.data.filter(cat => cat.name.toLowerCase().includes(query.toLowerCase())
@@ -38,13 +38,13 @@ export default function SearchForm() {
         id="name" type="text" name="textfield" placeholder="Search" value={query} onChange={handleInputChange}/>
     </form>
 
-    {data.map(char => (
-    <Link key={char.id} to={`/post/${char.id}`}>    
-     <ArticleCard key={char.id} 
-    title={char.title}
-    user_id={char.user_id} 
-    category_id ={char.category_id} 
-    body={char.body}
+    {data.map(item => (
+    <Link key={item.id} to={`/post/${item.id}`}>    
+     <ArticleCard key={item.id} 
+    name={item.name}
+    description={item.description} 
+    price ={item.price} 
+    location={item.location}
     />
     </Link>
 ))}

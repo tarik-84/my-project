@@ -8,7 +8,7 @@ const GuideList = props => {
       console.log('value', value)
     return(
         <div className='fp-explore-container text-left'>
-                <h3>Explore User Guides</h3>
+                <h3>Explore Our Items</h3>
                 <div className='article-wrapper'>
                     {value.guide.map(post => (
                       <Link key={post.id} to={`/item/${post.id}`} >

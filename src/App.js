@@ -18,9 +18,7 @@ import { axiosWithAuth } from './components/Axios/axiosWithAuth';
 
 function App(props) {
 
-    const [guide, setGuide] = useState([]);
-    // const history = useHistory();
-    // const {id} = useParams
+  const [guide, setGuide] = useState([]);
     
 
   const fetchData = () => {

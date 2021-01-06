@@ -33,9 +33,17 @@ hr{
 .article-wrapper{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
+    text-align: center;
+    justify-content: space-around;
     width: 100%;
+    background-image: url(../../asset/market.jpg);
+    border: 1px solid black;
+}
+
+.article-wrapper a:link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold
 }
 
 @media (max-width: 700px){
@@ -44,3 +52,4 @@ hr{
         flex-direction: column;
     }
 }
+

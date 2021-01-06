@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory, useParams } from 'react-router-dom'
 import { axiosWithAuth } from '../Axios/axiosWithAuth'
+import ArticleCard from '../FP_ArticleCard/FP_ArticleCard'
+import { Button } from '@material-ui/core';
 
 
 const ViewGuide = props => {
@@ -40,14 +42,17 @@ const ViewGuide = props => {
     return(
       <div>
         <div className='view'>
-          <h1>{view.name}</h1>
-          <p>{view.description}</p>
-          <p>{view.price}</p>
-          <p>{view.location_id}</p> 
+        <ArticleCard
+                       fetchData={props.fetchData}
+                       name={view.name}
+                       description={view.description}
+                       price={view.price}
+                       location={view.location_id}
+                       /> 
         </div>
         <div>   
-          <button onClick={() => history.push(`/edit-guide/${params.id}`)}>Edit</button>
-          <button onClick={deleteGuide}>Delete</button> 
+          <Button variant="outlined" color="primary" size="small" onClick={() => history.push(`/edit-guide/${params.id}`)}>Edit</Button>
+          <Button variant="outlined" color="primary" size="small" onClick={deleteGuide}>Delete</Button>
         </div>
       </div>  
     )
